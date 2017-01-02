@@ -36,7 +36,8 @@ export default class extends React.Component {
 
   showPhoto (e, id) {
     e.preventDefault()
-    this.props.url.push('/photo?id=' + id)
+    window.location.href = '/photo?id=' + id
+    // this.props.url.push('/photo?id=' + id)
   }
 
   render () {

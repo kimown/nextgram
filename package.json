@@ -10,7 +10,7 @@
      "parser": "babel-eslint"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3333",
     "build": "next build",
     "start": "next start",
     "lint": "standard"
