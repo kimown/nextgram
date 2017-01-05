@@ -2,11 +2,16 @@ import React from 'react'
 import Modal from '../components/modal'
 import { style } from 'next/css'
 
+// load meta info
+import metaInfo from './meta-info.json'
+
+console.info(metaInfo)
+
 export default class extends React.Component {
   static getInitialProps () {
     return {
       // dummy data
-      photos: new Array(15).fill(0).map((v, k) => k + 1)
+      photos: metaInfo
     }
   }
 
@@ -34,10 +39,9 @@ export default class extends React.Component {
     this.props.url.back()
   }
 
-  showPhoto (e, id) {
+  showPhoto (e, href) {
     e.preventDefault()
-    window.location.href = '/photo?id=' + id
-    // this.props.url.push('/photo?id=' + id)
+    window.location.href = href
   }
 
   render () {
@@ -51,16 +55,19 @@ export default class extends React.Component {
             />
         }
         {
-          this.props.photos.map((id) => (
-            <div key={id} className={style(styles.photo)}>
-              <a
-                className={style(styles.photoLink)}
-                href={'/photo?id=' + id}
-                onClick={(e) => this.showPhoto(e, id)}>
-                {id}
-              </a>
-            </div>
-          ))
+          Object.keys(this.props.photos).map((keyItem, key) => {
+            const metaInfoItem = this.props.photos[keyItem]
+            return (
+                <div key={key} className={style(styles.photo)}>
+                  <a
+                      className={style(styles.photoLink)}
+                      data-href={metaInfoItem.href}
+                      onClick={(e) => this.showPhoto(e, `/${metaInfoItem.href}`)}>
+                      {key}
+                  </a>
+                </div>
+            )
+          })
         }
       </div>
     )
