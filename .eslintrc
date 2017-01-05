@@ -1,0 +1,28 @@
+{
+  // issue: http://stackoverflow.com/questions/30398825/eslint-window-is-not-defined-how-to-allow-global-variables-in-package-json
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  // eslint bug: https://github.com/babel/babel-eslint/issues/312#issuecomment-219219893
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    // doc: http://eslint.org/docs/user-guide/configuring#configuring-rules
+    "semi": 0,
+    // issue: https://github.com/airbnb/javascript/issues/1169#issuecomment-259308502
+    "comma-dangle": 0,
+
+    // jsx file extension: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md#rule-options
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}
