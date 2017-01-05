@@ -28,6 +28,9 @@ cnpm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/
 
 [ant-design](https://github.com/ant-design/ant-design)
 
+[next.js](https://github.com/zeit/next.js)
+
+[nextgram](https://github.com/zeit/nextgram)
 
 ## tools
 [create-react-app](https://github.com/facebookincubator/create-react-app)
