@@ -63,7 +63,7 @@ export default class extends Component {
                   className={style(styles.photoLink)}
                   onClick={e => this.showPhoto(e, `/${metaInfoItem.href}`)}
                 >
-                  {key}
+                  {keyItem}
                 </button>
               </div>
             )
