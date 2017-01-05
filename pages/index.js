@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { style } from 'next/css'
 
 // load meta info
@@ -31,7 +31,7 @@ const styles = {
   }
 }
 
-export default class extends React.Component {
+export default class extends Component {
   static propTypes = {
     photos: {
       'react-slick': React.PropTypes.object.isRequired
