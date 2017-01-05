@@ -1,4 +1,7 @@
 {
+  "demo":{
+    "href": "demo"
+  },
   "react-slick":{
     "href": "react-slick"
   }

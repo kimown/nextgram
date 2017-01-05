@@ -55,6 +55,9 @@ export default class extends Component {
       <div className={style(styles.list)}>
         {
           Object.keys(this.props.photos).map((keyItem, key) => {
+            if (keyItem === 'demo') {
+              return null
+            }
             const metaInfoItem = this.props.photos[keyItem]
             return (
               <div key={key} className={style(styles.photo)}>

@@ -3,7 +3,6 @@
  */
 import React from 'react'
 import Head from 'next/head'
-import meta from '../meta-info.json'
 import SimpleSlider from './../../components/react-slick/'
 
 export default () => (
