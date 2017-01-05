@@ -13,12 +13,16 @@ cnpm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/
 
 ## Links
 
+[npmjs](https://www.npmjs.com/)
+
 [Sortable](https://github.com/RubaXa/Sortable)
 [ant-design](https://github.com/ant-design/ant-design)
 
 
 
+[create-react-app](https://github.com/facebookincubator/create-react-app)
 [gulp](https://github.com/gulpjs/gulp)
+[gulp-doc](http://gulpjs.org/recipes/pass-arguments-from-cli.html)
 [gulp-shell](https://github.com/sun-zheng-an/gulp-shell)
 
 
