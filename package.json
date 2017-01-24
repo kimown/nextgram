@@ -20,6 +20,8 @@
     "lint": "standard"
   },
   "devDependencies": {
+    "base64-js": "^1.2.0",
+    "detect-port": "^1.1.0",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "^2.1.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-react": "^6.6.0",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
+    "js-base64": "^2.1.9",
     "minimist": "^1.2.0",
     "webpack-dev-server": "^1.16.2"
   }
