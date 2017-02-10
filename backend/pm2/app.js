@@ -4,13 +4,24 @@
 
 var express = require('express')
 var app = express();
-const argv = require('yargs').argv;
-
+const openBrowser = require('react-dev-utils/openBrowser');
+const PORT = 8080;
 
 app.get('/', function (req, res) {
-    res.send('app.js233'+argv.module+"===---"+argv.api+"--===oiiii9999"+argv.env)
+    res.send('app.js' + PORT)
 })
 
-app.listen(3333, function () {
-    console.log('Example app listening on port 3333!')
+app.listen(PORT, function () {
+  console.log(`Example app listening on port ! ${PORT}`)
+  const openUrl = `http://localhost:${PORT}`;
+  openBrowser(openUrl)
 })
+
+// process.on('exit', (code) => {
+//   console.log(`----About to exit with code: ${code}`);
+// });
+
+// setTimeout(()=>{
+//   process.exit(1);
+//
+// },2000)
