@@ -5,14 +5,15 @@
 var express = require('express')
 var app = express();
 const openBrowser = require('react-dev-utils/openBrowser');
-const PORT = 8080;
+const argv = require('yargs').argv;
+const PORT = argv.env.port;
 
 app.get('/', function (req, res) {
-    res.send('app.js' + PORT)
+    res.send('app.js233'+argv.env.port+(typeof argv.env.port))
 })
 
 app.listen(PORT, function () {
-  console.log(`Example app listening on port ! ${PORT}`)
+    console.log('Example app listening on port !')
   const openUrl = `http://localhost:${PORT}`;
   openBrowser(openUrl)
 })
